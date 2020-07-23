@@ -1,13 +1,9 @@
 package com.carlos.app;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        //Clase pirncipal del programa
     }
 }
