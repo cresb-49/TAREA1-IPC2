@@ -1,4 +1,7 @@
 package com.carlos.app;
-class Logica {
-    
+
+public class Logica {
+    public Logica(){
+        
+    }
 }
