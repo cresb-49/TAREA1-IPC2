@@ -109,13 +109,14 @@ public class InterfazGrafica extends javax.swing.JFrame {
         // TODO add your handling code here:
         String cadena1= jTextFieldSecuancia1.getText();
         String cadena2= jTextFieldSecuencia2.getText();
-        if(cadena1!=""&&cadena2!=""){
+        if(cadena1.length()!= 0 &&cadena2.length()!= 0){
             Logica analisis = new Logica();
             analisis.analisisDeDatos(cadena1, cadena2);
             jTextField3.setText(analisis.getSecuanciaResultante());
         }
         else
         {
+            jTextField3.setText("-----");
             JOptionPane.showMessageDialog(this, "Datos de secuencia vacios");
         }
     }//GEN-LAST:event_jButtonRealizarSecuenciaActionPerformed
