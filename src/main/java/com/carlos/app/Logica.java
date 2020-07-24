@@ -12,9 +12,13 @@ public class Logica {
         int posicionDeExtracccion=0;
         String primeraletradelacadena1;
         int posicion = 0;
-        int caracter1 = 0;
         int caracter2 = 0;
         int cantidadDeConcidencias=0;
+        int posicionDeComparacion1=0;
+        int posicionInicial1=0;
+        int posicionDeComparacion2=0;
+        int posicionInicial2=0;
+
         while(posicionDeExtracccion<cadena1.length()){
             primeraletradelacadena1=String.valueOf(cadena1.charAt(posicionDeExtracccion)); 
             if(cadena2.indexOf(primeraletradelacadena1, posicion)!= -1)
@@ -23,8 +27,10 @@ public class Logica {
                     caracter2 = cadena2.indexOf(primeraletradelacadena1, posicion);
                     posicion= caracter2+1;
                     if((posicionDeExtracccion+1) < cadena1.length()&&(caracter2+1)<cadena2.length()){
-                        int posicionDeComparacion1 = posicionDeExtracccion;
-                        int posicionDeComparacion2 = caracter2;
+                        posicionInicial1=posicionDeExtracccion;
+                        posicionInicial2=caracter2;
+                        posicionDeComparacion1 = posicionDeExtracccion;
+                        posicionDeComparacion2 = caracter2;
                         while(cadena1.charAt(posicionDeComparacion1)==cadena2.charAt(posicionDeComparacion2)){
                             cantidadDeConcidencias++;
                             if((posicionDeComparacion1+1)<cadena1.length())
@@ -38,6 +44,13 @@ public class Logica {
                         }
                         if(cantidadDeConcidencias>1){
                             System.out.println("La cantidad de coincidencias es: "+ cantidadDeConcidencias);
+                            if(posicionDeComparacion1<cadena1.length())
+                            {
+                                System.out.println("Inicio de la coincidencia: "+posicionInicial1+ " fin de la coincidencia: "+posicionDeComparacion1);
+                            }
+                            else{
+                                System.out.println("Inicio de la coincidencia: "+posicionInicial1+ " fin de la coincidencia: "+(posicionDeComparacion1-1));
+                            }
                         }
                         cantidadDeConcidencias=0;
                     }

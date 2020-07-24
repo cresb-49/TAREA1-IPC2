@@ -6,8 +6,8 @@ public class App
     {
         System.out.println("Se ejecuto el programa");
         Logica analisis = new Logica();
-        String cadena1 = "UFJHGFHJSDGFJGSDFJ";
-        String cadena2 = "YTWUFSJBLISEMUFDHU";
+        String cadena1 = "ATGTCTTCCTCGA";
+        String cadena2 = "TGCTTCCTATGAC";
         analisis.analisisDeDatos(cadena1, cadena2);
 
     }
