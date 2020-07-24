@@ -60,7 +60,6 @@ public class Logica {
                                 setSecuanciaResultante(extraerTexto(cadena1, inicio, fin));
                             }
                         }
-
                         cantidadDeConcidencias=0;
                     }
                 }
