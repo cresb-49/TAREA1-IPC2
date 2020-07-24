@@ -3,6 +3,8 @@ package com.carlos.app;
 
 public class Logica {
     //Constructor vacio del archivo logica
+    static int SecuanciaResultante="";
+    static int numeroDeConcidencias=0;
     public Logica(){
 
     }
@@ -46,9 +48,15 @@ public class Logica {
                             System.out.println("La cantidad de coincidencias es: "+ cantidadDeConcidencias);
                             if(posicionDeComparacion1<cadena1.length())
                             {
+                                int incio = posicionInicial1;
+                                int fin = posicionDeComparacion1;
+                                this.extraerTexto(cadena1, inicio, fin);
                                 System.out.println("Inicio de la coincidencia: "+posicionInicial1+ " fin de la coincidencia: "+posicionDeComparacion1);
                             }
                             else{
+                                int incio = posicionInicial1;
+                                int fin = posicionDeComparacion1-1;
+                                this.extraerTexto(cadena1, inicio, fin);
                                 System.out.println("Inicio de la coincidencia: "+posicionInicial1+ " fin de la coincidencia: "+(posicionDeComparacion1-1));
                             }
                         }
@@ -60,4 +68,18 @@ public class Logica {
             posicionDeExtracccion++;
         }
     }
+    private static String extraerTexto(String cadena, int inicio, int fin){
+        String temporal="";
+        char []temporalLetras = new char[(fin-inicio)+1];
+        int contador=0;
+        //extraccion de caracteres en los limites descritos
+        for (int i = inicio; i <= fin; i++) {
+            temporalLetras[contador]=cadena.charAt(i);
+            contador++;
+        }
+        //converscion de la cadena a un String
+        temporal=String.valueOf(temporalLetras);
+        return temporal;
+    }
+    
 }
