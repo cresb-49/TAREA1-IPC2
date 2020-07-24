@@ -4,6 +4,14 @@ public class App
 {
     public static void main( String[] args )
     {
+        InterfazGrafica ventanaInicial = new InterfazGrafica("Secuenciador de ADN");
+        
+        
+        
+        
+        
+        
+        
         System.out.println("Se ejecuto el programa");
         Logica analisis = new Logica();
         /*

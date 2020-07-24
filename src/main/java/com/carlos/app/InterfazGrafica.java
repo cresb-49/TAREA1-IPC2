@@ -14,8 +14,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
     /**
      * Creates new form InterfazGrafica
      */
-    public InterfazGrafica() {
+    public InterfazGrafica(String tittle) {
+        super(tittle);
         initComponents();
+        this.setVisible(true);
         
     }
 
