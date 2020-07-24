@@ -17,19 +17,15 @@ public class Logica {
         int cantidadDeConcidencias=0;
         while(posicionDeExtracccion<cadena1.length()){
             primeraletradelacadena1=String.valueOf(cadena1.charAt(posicionDeExtracccion)); 
-            
             if(cadena2.indexOf(primeraletradelacadena1, posicion)!= -1)
             {
-                
                 while(cadena2.indexOf(primeraletradelacadena1, posicion)>-1){
                     caracter2 = cadena2.indexOf(primeraletradelacadena1, posicion);
                     posicion= caracter2+1;
                     if((posicionDeExtracccion+1) < cadena1.length()&&(caracter2+1)<cadena2.length()){
                         int posicionDeComparacion1 = posicionDeExtracccion;
-                        int posicionDeComparacion2 = caracter2; 
-
-
-                        while(cadena1.charAt(posicionDeComparacion1+1)==cadena2.charAt(posicionDeComparacion2+1)){
+                        int posicionDeComparacion2 = caracter2;
+                        while(cadena1.charAt(posicionDeComparacion1)==cadena2.charAt(posicionDeComparacion2)){
                             cantidadDeConcidencias++;
                             if((posicionDeComparacion1+1)<cadena1.length())
                             {
@@ -40,23 +36,15 @@ public class Logica {
                                 posicionDeComparacion2++;
                             }
                         }
-                        if(cantidadDeConcidencias>0){
+                        if(cantidadDeConcidencias>1){
                             System.out.println("La cantidad de coincidencias es: "+ cantidadDeConcidencias);
                         }
                         cantidadDeConcidencias=0;
-                        /*
-                        if(cadena1.charAt(posicionDeComparacion1+1)!=cadena2.charAt(posicionDeComparacion2+1)){
-                            System.out.println(primeraletradelacadena1);
-                            System.out.println(caracter2);
-                            System.out.println("Candidato de analisis");
-                        }*/
                     }
                 }
             }
             posicion=0;
             posicionDeExtracccion++;
         }
-   
-        
     }
 }
