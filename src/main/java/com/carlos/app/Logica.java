@@ -11,8 +11,8 @@ public class Logica {
     private int numeroDeConcidencias=0;
 
     public void analisisDeDatos(String cadena1, String cadena2){
-        System.out.println(cadena1);
-        System.out.println(cadena2); 
+        //System.out.println(cadena1);
+        //System.out.println(cadena2); 
         int posicionDeExtracccion=0;
         String primeraletradelacadena1;
         int posicion = 0;
@@ -57,10 +57,10 @@ public class Logica {
                         //Comparamos si la cantida de concidencia si es mayor de 1
                         if(cantidadDeConcidencias>1){
                             //Escribimos al el resultado de las operaciones y la ubucacion de la secuencia para la extraccion de la misma
-                            System.out.println("La cantidad de coincidencias es: "+ cantidadDeConcidencias);
+                            //System.out.println("La cantidad de coincidencias es: "+ cantidadDeConcidencias);
                             int inicio = posicionInicial1;
                             int fin=posicionInicial1+cantidadDeConcidencias-1;
-                            System.out.println("Inicio de la coincidencia: "+posicionInicial1+ " fin de la coincidencia: "+fin);
+                            //System.out.println("Inicio de la coincidencia: "+posicionInicial1+ " fin de la coincidencia: "+fin);
                             //Si el numero de coincidencias es mayor al que se haya almacenado anteriormente guardamos los nuevos valores 
                             if(cantidadDeConcidencias>getNumeroDeConcidencias()){
                                 setNumeroDeConcidencias(cantidadDeConcidencias);
@@ -75,13 +75,13 @@ public class Logica {
             posicionDeExtracccion++;
         }
         //se imprime la secuncia resultante de la busqueda
-        System.out.println("SECUENCIA RESULTANTE");
-        System.out.println(getSecuanciaResultante());
+        //System.out.println("SECUENCIA RESULTANTE");
+        //System.out.println(getSecuanciaResultante());
     }
     private static String extraerTexto(String cadena, int inicio, int fin){
         String temporal="";
-        System.out.println(inicio);
-        System.out.println(fin);
+        //System.out.println(inicio);
+        //System.out.println(fin);
         char []temporalLetras = new char[(fin-inicio)+1];
         int contador=0;
         //extraccion de caracteres en los limites descritos
